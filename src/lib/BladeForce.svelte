@@ -3,13 +3,16 @@
     export let color
     export let force
     export let direction
+    let strokeWidth = 4
 
-    $: deltaX = force * Math.cos(direction)
-    $: deltaY = -force * Math.sin(direction)
+    // Rotate: Clockwise, in degrees
+    $: transform = "rotate(" + ( -direction * 180 / Math.PI) + ", " + center.x + ", " + center.y + ")"
 
 </script>
 
-<line
-    x1={center.x} y1={center.y} x2={center.x + deltaX} y2={center.y + deltaY}
-    stroke={color} stroke-width="4" fill={color}
-/>
+<g {transform}>
+    <line
+        x1={center.x} y1={center.y} x2={center.x + force} y2={center.y}
+        stroke={color} stroke-width={strokeWidth} fill={color}
+    />
+</g>

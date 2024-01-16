@@ -6,14 +6,13 @@ export let stroke
 export let strokeWidth
 export let fill
 
-$: deltaX = r * Math.cos(alfa)
-$: deltaY = -r * Math.sin(alfa)
+$: transform = "rotate(" + ( -alfa * 180 / Math.PI) + ", " + center.x + ", " + center.y + ")"
 
 </script>
 
-
 <line
-    x1={center.x - deltaX} y1={center.y - deltaY}
-    x2={center.x + deltaX} y2={center.y + deltaY}
+    x1={center.x - r} y1={center.y}
+    x2={center.x + r} y2={center.y}
     {stroke} stroke-width={strokeWidth} {fill}
+    {transform}
 />
