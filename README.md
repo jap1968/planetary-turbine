@@ -1,48 +1,19 @@
-# Svelte + Vite
+# Planetary turbine
 
-This template should help get you started developing with Svelte in Vite.
+The goal of this project is to have a graphical tool to help the visualization and analysis of a particular type of turbines, that I've chosen to refer to as Planetary Turbines.
 
-## Recommended IDE Setup
+These are a specific type of VAWT with a particularity: They need to be orientated accordingly to the direction of the wind. One of the main advantages of other types of vertical axis wind turbines is they are omnidirectional. They can work indistictly with the wind coming from any direction. Instead, this type of turbine do orient its blades so they can capture the most wind energy for every position. The mechanism is very similar to the sails orientation in the case of sailing boats.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Despite being a design that is many years old (*), you can hardly see models of this type in operation, and the existing documentation is very scarce. Probably the reason for the limited commercial success was due to the mechanical complexity as well as the appearance of other much simpler turbine models.
 
-## Need an official Svelte framework?
+(*) There are one [patent](https://patentimages.storage.googleapis.com/b7/3d/aa/9234e118906a28/US16616.pdf) as old as from 1857 referring to this type of turbine.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## The name
 
-## Technical considerations
+Regarding the name of the turbine, there are different names, such as panemone, epicycloidal turbine, rotating blade turbine. The motion of the blades is simmilar to the motion of a planet, with a rotation and a translation movement. In this particular case, the rotation is the slow movement. So in this particular machine, for a blade one day lasts two years, so one year is just half a day. The naming is simmilar to the one used for planetary gears, having also rotation and traslation movements.
 
-**Why use this over SvelteKit?**
+## The project
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+With this tool you can view the behaviour of the turbine under different configurations (modifying the wind direction and the vane orientation) and even modify the geometry (number of blades) of the turbine.
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
-# planetary-turbine
+You can see a [live demo here](https://jap1968.github.io/planetary-turbine/)
