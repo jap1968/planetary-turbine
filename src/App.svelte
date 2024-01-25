@@ -107,19 +107,31 @@ onDestroy(() => {
 
   <div class="row">
     <div class="column">
-      <label for="numArms">Arms:</label>
+      <button on:click={() => autoRotate = !autoRotate} >
+        {#if autoRotate}
+          Stop rotation
+        {:else}
+          Start rotation
+        {/if}
+      </button>
+      <!--
+        <label for="autoRotate">Auto:</label>
+        <input id="autoRotate" type="checkbox" bind:checked={autoRotate}/>
+      -->
+      <select bind:value={autoRotateRight} on:change={() => console.log(autoRotateRight)}>
+        <option value="left"> CCW / Left</option>
+        <option value="right"> CW / Right</option>
+      </select><br/>
+      <br/>
+
+      <label for="numArms">Number of arms:</label>
       <input id="numArms" type="number" bind:value={turbine.arms.number} size="2" min="2" max="8" step="1"/><br/>
+      <br/>
 
       <label for="degRotation">Rotation:</label>
       <input type="number" size="4" bind:value={alfaDeg} disabled/>&nbsp;
       <input id="degRotation" type="range" bind:value={alfaDeg} min="0" max="359" step="1" disabled={autoRotate} /><br/>
       
-      <label for="autoRotate">Auto:</label>
-      <input id="autoRotate" type="checkbox" bind:checked={autoRotate}/>
-      <select bind:value={autoRotateRight} on:change={() => console.log(autoRotateRight)}>
-        <option value="left"> CCW / Left</option>
-        <option value="right"> CW / Right</option>
-      </select><br/>
     
       <label for="wDirection">Wind Direction:</label>
       <input type="number" size="4" bind:value={windDegNorthDir} disabled/>&nbsp;
