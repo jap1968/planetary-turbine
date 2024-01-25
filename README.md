@@ -6,15 +6,15 @@ These are a specific type of VAWT with a particularity: They need to be orientat
 
 Despite being a design that is many years old[^1], you can hardly see models of this type in operation, and the existing documentation is very scarce. Probably the reason for the limited commercial success was due to the mechanical complexity as well as the appearance of other much simpler turbine models.
 
-[^1]: There are one [patent](https://patentimages.storage.googleapis.com/b7/3d/aa/9234e118906a28/US16616.pdf) as old as from 1857 referring to this type of turbine.
+[^1]: There are one [patent](https://patents.google.com/patent/US2003A/) as old as from 1841 referring to this type of turbine.
 
 ## The name
 
-Regarding the name of the turbine, there are different names, such as panemone, epicycloidal turbine, rotating blade turbine. The motion of the blades is simmilar to the motion of a planet, with a rotation and a translation movement. In this particular case, the rotation is the slow movement. So in this particular machine, for a blade one day lasts two years, so one year is just half a day. The naming is simmilar to the one used for planetary gears, having also rotation and traslation movements.
+Regarding the name of the turbine, these are referred using different names such as *panemone*, *cycloidal turbine*, *rotating blade turbine*. The motion of the blades is similar to the motion of a planet, having a rotation and a translation movement. In this case, the rotation is the slow movement with just half a turn for every complete translation. So in this machine, for a blade *one day lasts for two years and one year is just half a day*. The naming is similar to the one used for planetary gears, having also rotation and traslation movements.
 
 ## The project
 
-With this tool you can view the behaviour of the turbine under different configurations (modifying the wind direction and the vane orientation) and even modify the geometry (number of blades) of the turbine.
+With this tool you can view the behaviour of the turbine under different configurations (modifying the wind direction and the vane orientation) and even modify the geometry (number of blades) of the turbine. You can find some additional information on [IG](https://www.instagram.com/planetaryturbine)
 
 You can see a [live demo here](https://jap1968.github.io/planetary-turbine/)
 

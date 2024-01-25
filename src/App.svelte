@@ -101,10 +101,9 @@ onDestroy(() => {
 */
 
 </script>
-<h2>Planetary turbine</h2>
+<h2><a href="https://github.com/jap1968/planetary-turbine">Planetary turbine</a></h2>
 
 <main>
-
   <div class="row">
     <div class="column">
       <button on:click={() => autoRotate = !autoRotate} >
